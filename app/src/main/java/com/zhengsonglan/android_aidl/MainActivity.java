@@ -6,22 +6,19 @@ import android.support.v7.app.ActionBarActivity;
 
 
 public class MainActivity extends ActionBarActivity {
-
+    Intent intentService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startService(new Intent(this,AppService.class));
+        intentService=new Intent(this, AppService.class);
+        startService(intentService);
 
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    public void startActivityForResult(Intent intent, int requestCode, Bundle options) {
-        super.startActivityForResult(intent, requestCode, options);
+    protected void onDestroy() {
+        stopService(intentService);
+        super.onDestroy();
     }
 }

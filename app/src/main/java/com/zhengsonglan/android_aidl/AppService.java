@@ -12,7 +12,7 @@ public class AppService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
+        Log.e(TAG,"onBind AppService");
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
@@ -25,7 +25,7 @@ public class AppService extends Service {
     @Override
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
-        Log.e(TAG,"onCreate onStart");
+        Log.e(TAG,"onStart AppService");
     }
 
     @Override
