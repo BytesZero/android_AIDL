@@ -14,6 +14,7 @@ public class MainActivity extends ActionBarActivity {
         intentService=new Intent(this, AppService.class);
         startService(intentService);
 
+
     }
 
     @Override

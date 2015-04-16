@@ -6,13 +6,39 @@
         android:id="@+id/main_bt_start"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:text="启动Service"/>
+        android:text="启动外部Service"/>
 
     <Button
         android:id="@+id/main_bt_stop"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:text="关闭Service"/>
+        android:text="关闭外部Service"/>
+
+
+    <Button
+        android:id="@+id/main_bt_bind"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="绑定外部Service"/>
+
+    <Button
+        android:id="@+id/main_bt_unbind"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="解绑外部Service"/>
+
+    <EditText
+        android:id="@+id/main_et_message"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="这是新的数据"
+        android:hint="输入数据"/>
+
+    <Button
+        android:id="@+id/main_bt_sync"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="同步数据到绑定的服务中"/>
 
 
 </LinearLayout>
